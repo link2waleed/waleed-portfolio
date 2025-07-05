@@ -94,7 +94,7 @@ const Projects: React.FC = () => {
     {
       title: "Scan2PDF",
       description: "Advanced document scanning application with OCR capabilities, e-signature functionality, and document branding features.",
-      image: "/public/assets/scan2pdf.png",
+      image: "/assets/scan2pdf.png",
       category: "Productivity",
       features: [
         "Document scanning to PDF",
@@ -121,7 +121,7 @@ const Projects: React.FC = () => {
     {
       title: "Wallpaper Downloader",
       description: "Beautiful wallpaper application featuring high-quality images with daily updates and smooth animations.",
-      image: "/public/assets/wallpaper.jpg",
+      image: "/assets/wallpaper.jpg",
       category: "Entertainment",
       features: [
         "High-quality wallpapers",
@@ -148,7 +148,7 @@ const Projects: React.FC = () => {
     {
       title: "Quran App",
       description: "Comprehensive Quran reading application with translations, tafseer, and audio recitation features.",
-      image: "/public/assets/quran.png",
+      image: "/assets/quran.png",
       category: "Religious",
       features: [
         "Complete Quran with Ayahs",
@@ -294,7 +294,7 @@ const Projects: React.FC = () => {
                group-hover/store:scale-110 transition-transform duration-300 shadow-lg"
               >
                 <img
-                  src="/public/assets/playstore.png"
+                  src="/assets/playstore.png"
                   alt="Google Play Store"
                   className="w-full h-full object-cover"
                 />
