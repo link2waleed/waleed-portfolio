@@ -39,7 +39,7 @@ const Hero: React.FC = () => {
               <div className="relative w-full h-full rounded-full overflow-hidden bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 p-[3px] z-20">
                 <div className="w-full h-full rounded-full bg-black p-1">
                   <img
-                    src="/assets/waleed.jpg"
+                    src="/public/assets/waleed.jpg"
                     alt="Waleed Ahmad"
                     loading="lazy"
                     className="w-full h-full rounded-full object-cover"

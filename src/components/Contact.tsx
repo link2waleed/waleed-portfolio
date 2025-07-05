@@ -86,7 +86,7 @@ Sent from your portfolio contact form`;
                   <div className="w-12 h-12 bg-green-50 rounded-lg flex items-center justify-center">
                     {/* <MessageCircle className="w-6 h-6 text-white" /> */}
                     <img
-                    src='/assets/whatsapp.png'
+                    src='/public/assets/whatsapp.png'
                     className="w-full h-full object-cover"
                     />
                   </div>
@@ -161,7 +161,7 @@ Sent from your portfolio contact form`;
                 <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
                   {/* <MessageCircle className="w-5 h-5 text-white" /> */}
                    <img
-                    src='/assets/whatsapp.png'
+                    src='/public/assets/whatsapp.png'
                     className="w-full h-full object-contain"
                     />
                 </div>
