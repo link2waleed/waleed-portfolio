@@ -21,8 +21,7 @@ const Contact: React.FC = () => {
 💬 Message:
 ${formData.message}
 
----
-Sent from your portfolio contact form`;
+`;
 
     // Your WhatsApp number (replace with your actual number)
     const whatsappNumber = '923044204371'; // Your number without + sign
