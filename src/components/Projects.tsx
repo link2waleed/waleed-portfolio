@@ -115,11 +115,11 @@ const Projects: React.FC = () => {
         playStore: "https://play.google.com/store/apps/details?id=com.lettech.scanner",
         appStore: "https://apps.apple.com/app/scan2pdf/id1234567890"
       },
-      privateRepo: "scan2pdf",
+      privateRepo: "Scanner-App",
       gradient: "from-blue-500 to-purple-600"
     },
     {
-      title: "Wallpaper Downloader",
+      title: "Wallure",
       description: "Beautiful wallpaper application featuring high-quality images with daily updates and smooth animations.",
       image: "/assets/wallpaper.jpg",
       category: "Entertainment",
@@ -142,7 +142,7 @@ const Projects: React.FC = () => {
         playStore: "https://play.google.com/store/apps/details?id=com.waleed.wallpaper",
         appStore: "https://apps.apple.com/app/wallpaper-downloader/id1234567891"
       },
-      privateRepo: "wallpaper-gallery",
+      privateRepo: "Wallpaper-App",
       gradient: "from-purple-500 to-teal-600"
     },
     {
@@ -169,7 +169,7 @@ const Projects: React.FC = () => {
         playStore: "https://play.google.com/store/apps/details?id=com.waleed.quran",
         appStore: "https://apps.apple.com/app/quran-reader/id1234567892"
       },
-      privateRepo: "quran-app",
+      privateRepo: "Quran-App",
       gradient: "from-green-500 to-teal-600"
     }
   ];
@@ -208,7 +208,7 @@ const Projects: React.FC = () => {
           <img
             src={project.image}
             alt={project.title}
-            className={`w-full h-full ${project.title === 'Wallpaper Downloader' ? 'object-cover' : 'object-contain'} transition-transform duration-700 group-hover:scale-105`}
+            className={`w-full h-full ${project.title === 'Wallure' ? 'object-cover' : 'object-contain'} transition-transform duration-700 group-hover:scale-105`}
           //className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
           />
           <div className={`absolute inset-0 bg-gradient-to-t ${project.gradient} opacity-20 group-hover:opacity-30 transition-opacity duration-300`} />
