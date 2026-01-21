@@ -1,7 +1,15 @@
 import React from 'react';
 import { ArrowDown, Download, Github, Linkedin, Sparkles, Code2 } from 'lucide-react';
+import AtomIcon from './AtomIcon';
 
 const Hero: React.FC = () => {
+  const scrollToProjects = () => {
+    const element = document.getElementById('projects');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const scrollToAbout = () => {
     const element = document.getElementById('about');
     if (element) {
@@ -10,7 +18,7 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden md:pt-16 lg:pt-18 bg-black">
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden md:pt-14 lg:pt-16 bg-black">
       {/* Advanced Animated Background */}
       <div className="absolute inset-0">
         {/* Base gradient */}
@@ -33,13 +41,14 @@ const Hero: React.FC = () => {
       <div className="container mx-auto px-6 py-20 relative z-10">
         <div className="max-w-5xl mx-auto text-center">
           {/* Enhanced Profile Image - Fixed animations */}
-          <div className="group mx-auto mb-8 w-44 h-44 sm:w-52 sm:h-52 lg:w-60 lg:h-60 transform transition-all duration-500 hover:scale-105 animate-fadeIn delay-200">
+          {/* Enhanced Profile Image - Fixed animations */}
+          <div className="group mx-auto mb-8 w-52 h-52 sm:w-64 sm:h-64 lg:w-72 lg:h-72 transform transition-all duration-500 hover:scale-105 animate-fadeIn delay-200">
             <div className="relative w-full h-full">
               {/* Main image container - completely isolated from animations */}
               <div className="relative w-full h-full rounded-full overflow-hidden bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 p-[3px] z-20">
                 <div className="w-full h-full rounded-full bg-black p-1">
                   <img
-                    src="/assets/waleed.jpg"
+                    src="/assets/waleed.png"
                     alt="Waleed Ahmad"
                     loading="lazy"
                     className="w-full h-full rounded-full object-cover"
@@ -88,7 +97,7 @@ const Hero: React.FC = () => {
           {/* Advanced Animated Title */}
           <div className="relative mb-8 animate-fadeIn delay-400">
             <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-2xl backdrop-blur-sm">
-              <Code2 size={24} className="text-blue-400 animate-pulse" />
+              <AtomIcon size={40} className="text-blue-400 animate-pulse" />
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">
                 <span className="relative">
                   <span className="absolute inset-0 bg-gradient-to-r from-blue-400 via-purple-400 via-pink-400 to-emerald-400 bg-clip-text text-transparent animate-gradient-x blur-[1px] opacity-70"></span>
@@ -106,35 +115,24 @@ const Hero: React.FC = () => {
               Crafting Beautiful Cross-Platform Mobile Applications
             </p>
             <p className="text-lg text-gray-400 max-w-3xl mx-auto leading-relaxed">
-              Specialized in React Native, Expo, and cross-platform development with a passion for creating
-              user-friendly mobile experiences that work seamlessly on both iOS and Android.
+              Cross-platform mobile development specialist with expertise in Play Store deployments, complex debugging, and delivering client-grade solutions that perform.
             </p>
           </div>
 
           {/* Modern CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 animate-fadeIn delay-700">
-            <button className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-2xl font-semibold overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25">
-              <div className="relative flex items-center justify-center gap-2">
-                <a
-                  href="/Waleed_Ahmad_CV.pdf"
-                  download="Waleed_Ahmad_CV.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3
-                   bg-gradient-to-r from-blue-600 to-purple-600
-                   text-white rounded-lg font-semibold
-                   hover:shadow-lg hover:scale-105 
-                   transition-all duration-300 ease-in-out
-                   focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2
-                   active:scale-95"
-                >
-                  <Download size={20} />
-                  Download CV
-                </a>
-              </div>
-            </button>
+            <a
+              href="/Waleed_Ahmad_CV.pdf"
+              download="Waleed_Ahmad_CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-2xl font-semibold overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black active:scale-95"
+            >
+              <Download size={20} />
+              Download CV
+            </a>
             <button
-              onClick={scrollToAbout}
+              onClick={scrollToProjects}
               className="group relative px-8 py-4 bg-transparent border-2 border-blue-400/50 text-blue-400 rounded-2xl font-semibold overflow-hidden transition-all duration-300 hover:scale-105 backdrop-blur-sm hover:bg-blue-400/10 hover:border-blue-400"
             >
               <div className="relative flex items-center justify-center gap-2">
@@ -145,8 +143,8 @@ const Hero: React.FC = () => {
           </div>
 
           {/* Enhanced Social Links */}
-          <div className="flex justify-center gap-6 animate-fadeIn delay-1000">
-            <a href="https://github.com/itsWaleeddev" target="_blank" rel="noopener noreferrer"
+          <div className="flex justify-center gap-6 animate-fadeIn delay-1000 mb-12">
+            <a href="https://github.com/link2waleed01-design" target="_blank" rel="noopener noreferrer"
               className="group relative w-16 h-16 bg-gradient-to-br from-gray-800/80 to-gray-900/80 rounded-2xl shadow-xl flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-blue-500/25 border border-gray-700/50 hover:border-blue-400/50 backdrop-blur-md">
               <Github size={26} className="text-gray-300 group-hover:text-blue-400 transition-colors duration-300 relative z-10" />
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 to-purple-500/0 group-hover:from-blue-500/10 group-hover:to-purple-500/10 rounded-2xl transition-all duration-300"></div>
@@ -160,22 +158,25 @@ const Hero: React.FC = () => {
             </a>
           </div>
 
+          {/* Scroll Indicator */}
+          <div className="flex justify-center animate-fadeIn delay-1000">
+            <button
+              onClick={scrollToAbout}
+              className="p-2 text-gray-400 hover:text-blue-400 transition-colors duration-300 animate-bounce cursor-pointer"
+              aria-label="Scroll down"
+            >
+              <ArrowDown size={28} />
+            </button>
+          </div>
+
           {/* Floating elements */}
-          <div className="absolute top-1/4 left-10 w-8 h-8 border border-purple-500/30 rounded-lg rotate-45 animate-bounce delay-1000"></div>
-          <div className="absolute top-1/3 right-10 w-6 h-6 border border-blue-500/30 rounded-full animate-ping delay-2000"></div>
-          <div className="absolute bottom-1/3 left-20 w-4 h-4 bg-emerald-500/30 rounded-full animate-pulse delay-3000"></div>
+          <div className="absolute top-1/4 left-10 w-6 h-6 border border-purple-500/30 rounded-lg rotate-45 animate-bounce delay-1000"></div>
+          <div className="absolute top-1/3 right-10 w-4 h-4 border border-blue-500/30 rounded-full animate-ping delay-2000"></div>
+          <div className="absolute bottom-1/3 left-20 w-2 h-2 bg-emerald-500/30 rounded-full animate-pulse delay-3000"></div>
         </div>
       </div>
 
-      {/* Enhanced Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <button onClick={scrollToAbout} className="group p-2 text-gray-500 hover:text-blue-400 transition-all duration-300">
-          <div className="flex flex-col items-center gap-2">
-            <div className="w-px h-8 bg-gradient-to-b from-transparent via-gray-500 to-transparent"></div>
-            <ArrowDown size={24} className="group-hover:translate-y-1 transition-transform duration-300" />
-          </div>
-        </button>
-      </div>
+
 
       <style>{`
         @keyframes spin-slow {

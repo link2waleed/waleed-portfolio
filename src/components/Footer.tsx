@@ -1,60 +1,66 @@
 import React from 'react';
-import { Heart, Code, Smartphone } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
+import PlayStoreIcon from './PlayStoreIcon';
 
 const Footer: React.FC = () => {
+  const socialLinks = [
+    {
+      name: 'GitHub',
+      href: 'https://github.com/link2waleed01-design',
+      icon: Github
+    },
+    {
+      name: 'LinkedIn',
+      href: 'https://www.linkedin.com/in/waleed-ahmad-140024288',
+      icon: Linkedin
+    },
+    {
+      name: 'Email',
+      href: 'mailto:waleedwaris1234@gmail.com',
+      icon: Mail
+    },
+    {
+      name: 'Play Store',
+      href: 'https://play.google.com/store/apps/dev?id=6520144085717592112',
+      icon: PlayStoreIcon
+    }
+  ];
+
   return (
-    <footer className="bg-gray-900 text-white py-12">
+    <footer className="bg-gray-950 border-t border-gray-800 py-10">
       <div className="container mx-auto px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
-            {/* Left Column */}
-            <div>
-              <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                React Native Developer
-              </h3>
-              <p className="text-gray-400 mb-4">
-                Passionate about creating beautiful, functional mobile applications 
-                that make a difference in people's lives.
-              </p>
-              <div className="flex items-center gap-2 text-sm text-gray-400">
-                <span>Made with</span>
-                <Heart size={16} className="text-red-400" />
-                <span>using</span>
-                <Code size={16} className="text-blue-400" />
-                <span>and</span>
-                <Smartphone size={16} className="text-green-400" />
-              </div>
-            </div>
-
-            {/* Middle Column */}
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="#home" className="hover:text-white transition-colors">Home</a></li>
-                <li><a href="#about" className="hover:text-white transition-colors">About</a></li>
-                <li><a href="#skills" className="hover:text-white transition-colors">Skills</a></li>
-                <li><a href="#projects" className="hover:text-white transition-colors">Projects</a></li>
-                <li><a href="#contact" className="hover:text-white transition-colors">Contact</a></li>
-              </ul>
-            </div>
-
-            {/* Right Column */}
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Services</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li>React Native Development</li>
-                <li>Cross-Platform Applications</li>
-                <li>Mobile App Consulting</li>
-                <li>UI/UX Design</li>
-                <li>App Store Optimization</li>
-              </ul>
-            </div>
+        <div className="max-w-4xl mx-auto">
+          {/* Brand */}
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-2">
+              Waleed Ahmad
+            </h3>
+            <p className="text-gray-400">Building production-ready React Native apps</p>
           </div>
 
-          {/* Bottom Section */}
-          <div className="border-t border-gray-800 pt-8 text-center">
-            <p className="text-gray-400">
-              © 2025 React Native Developer Portfolio. All rights reserved.
+          {/* Social Links */}
+          <div className="flex justify-center gap-4 mb-8">
+            {socialLinks.map((social) => {
+              const Icon = social.icon;
+              return (
+                <a
+                  key={social.name}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 bg-gray-800/50 border border-gray-700/50 rounded-lg text-gray-400 hover:text-white hover:bg-gray-700/50 transition-all duration-300"
+                  title={social.name}
+                >
+                  <Icon size={20} />
+                </a>
+              );
+            })}
+          </div>
+
+          {/* Copyright */}
+          <div className="text-center text-gray-500 text-sm">
+            <p className="flex items-center justify-center gap-1">
+              © 2026 Waleed Ahmad. All rights reserved.
             </p>
           </div>
         </div>

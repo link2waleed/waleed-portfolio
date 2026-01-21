@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Dark theme base */
+html {
+  scroll-behavior: smooth;
+  background-color: #0a0a0f;
+}
+
+body {
+  background-color: #0a0a0f;
+  color: #f3f4f6;
+}
+
 /* Custom animations */
 @keyframes fadeIn {
   from {
@@ -34,18 +45,13 @@
   animation-delay: 1s;
 }
 
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Custom scrollbar */
+/* Custom scrollbar - dark theme */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #1a1a2e;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -62,8 +68,6 @@ html {
   opacity: 0;
   transform: translateY(20px);
 }
-
-/* Add these custom animations to your global CSS file or Tailwind configuration */
 
 @keyframes gradient-sweep {
   0% {
@@ -83,17 +87,6 @@ html {
   }
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 /* Tailwind custom animation classes */
 .animate-gradient-sweep {
   animation: gradient-sweep 8s ease-in-out infinite;
@@ -101,8 +94,4 @@ html {
 
 .animate-gradient-glow {
   animation: gradient-glow 10s ease-in-out infinite;
-}
-
-.animate-fadeIn {
-  animation: fadeIn 0.6s ease-out forwards;
 }

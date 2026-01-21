@@ -1,0 +1,70 @@
+# Contact Form & Meeting Booking - Walkthrough
+
+## What Was Implemented
+
+### 1. Enhanced Contact Form with Toast Notifications
+- Professional floating toast notification that slides in from the right
+- Success state: "Thank you! We will contact you shortly."
+- Error state with fallback message
+- Auto-dismisses after 5 seconds with close button
+
+### 2. Book a Meeting Section
+Beautiful new section below the contact form featuring:
+- Gradient background with glassmorphism effects
+- Feature badges: "Google Meet video call", "Auto-syncs to calendars", "Pick your preferred time"
+- Prominent "Schedule a Call" button with "Free" badge
+- 30-minute consultation description
+
+![Book a Meeting Section](contact_section_full_1768915895210.png)
+
+---
+
+## Setup Required
+
+### Step 1: EmailJS Setup (Contact Form)
+
+1. Go to [emailjs.com](https://www.emailjs.com/) and create a free account
+2. **Add Email Service**: 
+   - Click "Email Services" → "Add New Service"
+   - Choose Gmail and connect `waleedwaris1234@gmail.com`
+3. **Create Email Template**:
+   - Click "Email Templates" → "Create New Template"
+   - Use these variables in your template:
+     - `{{from_name}}` - Sender's name
+     - `{{from_email}}` - Sender's email
+     - `{{message}}` - Message content
+4. **Get Your Credentials**:
+   - Service ID: Found in "Email Services" page
+   - Template ID: Found in "Email Templates" page
+   - Public Key: Found in "Account" → "General"
+5. **Update the code** in [Contact.tsx](file:///Users/waleedahmad/PortfolioWebsite/src/components/Contact.tsx):
+   ```typescript
+   const serviceId = 'service_xxxxx';    // Your Service ID
+   const templateId = 'template_xxxxx';  // Your Template ID
+   const publicKey = 'your_public_key';  // Your Public Key
+   ```
+
+---
+
+### Step 2: Cal.com Setup (Meeting Booking)
+
+1. Go to [cal.com](https://cal.com) and sign up with `waleedwaris1234@gmail.com`
+2. **Connect Google Calendar**:
+   - Settings → Calendars → Connect Google Calendar
+3. **Enable Google Meet**:
+   - Settings → Conferencing → Connect Google Meet
+4. **Create Event Type**:
+   - Click "Event Types" → "New"
+   - Name: "30-min Consultation" (or your preference)
+   - Duration: 30 minutes
+   - Location: Google Meet
+5. **Update the code** in [Contact.tsx](file:///Users/waleedahmad/PortfolioWebsite/src/components/Contact.tsx):
+   ```typescript
+   window.open('https://cal.com/your-username/30min', '_blank');
+   ```
+
+---
+
+## Demo Recording
+
+![Contact Form & Booking Demo](contact_form_demo_1768915830497.webp)
