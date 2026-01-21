@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowDown, Download, Github, Linkedin, Sparkles, Code2 } from 'lucide-react';
+import { ArrowDown, Download, Github, Linkedin, Sparkles, Code2, Calendar } from 'lucide-react';
 import AtomIcon from './AtomIcon';
 
 const Hero: React.FC = () => {
@@ -12,6 +12,13 @@ const Hero: React.FC = () => {
 
   const scrollToAbout = () => {
     const element = document.getElementById('about');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const scrollToBooking = () => {
+    const element = document.getElementById('booking');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
@@ -138,6 +145,15 @@ const Hero: React.FC = () => {
               <div className="relative flex items-center justify-center gap-2">
                 View My Work
                 <ArrowDown size={20} className="group-hover:translate-y-1 transition-transform duration-300" />
+              </div>
+            </button>
+            <button
+              onClick={scrollToBooking}
+              className="group relative px-8 py-4 bg-gradient-to-r from-purple-600/20 to-pink-600/20 border-2 border-purple-400/50 text-purple-400 rounded-2xl font-semibold overflow-hidden transition-all duration-300 hover:scale-105 backdrop-blur-sm hover:bg-purple-400/20 hover:border-purple-400 hover:text-purple-300"
+            >
+              <div className="relative flex items-center justify-center gap-2">
+                <Calendar size={20} />
+                Book a Meeting
               </div>
             </button>
           </div>

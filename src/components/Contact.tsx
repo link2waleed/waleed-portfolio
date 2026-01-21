@@ -298,7 +298,7 @@ const Contact: React.FC = () => {
           </div>
 
           {/* Book a Meeting Section */}
-          <div className="mt-16">
+          <div id="booking" className="mt-16">
             <div className="relative overflow-hidden bg-gradient-to-br from-gray-800/80 via-gray-800/50 to-gray-900/80 border border-gray-700/50 rounded-2xl p-8 md:p-10">
               {/* Background decoration */}
               <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
