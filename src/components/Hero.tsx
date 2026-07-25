@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowDown, Download, Github, Linkedin, Sparkles, Code2, Calendar } from 'lucide-react';
+import { ArrowDown, Download, Github, Linkedin, Sparkles, Code2, Calendar, Clock, Smartphone, ShieldCheck, CheckCircle2 } from 'lucide-react';
 import AtomIcon from './AtomIcon';
 
 const Hero: React.FC = () => {
@@ -45,150 +45,225 @@ const Hero: React.FC = () => {
         <div className="absolute bottom-32 left-1/4 w-1.5 h-1.5 bg-emerald-400 rounded-full animate-ping delay-1000"></div>
       </div>
 
-      <div className="container mx-auto px-6 py-20 relative z-10">
-        <div className="max-w-5xl mx-auto text-center">
-          {/* Enhanced Profile Image - Fixed animations */}
-          {/* Enhanced Profile Image - Fixed animations */}
-          <div className="group mx-auto mb-8 w-52 h-52 sm:w-64 sm:h-64 lg:w-72 lg:h-72 transform transition-all duration-500 hover:scale-105 animate-fadeIn delay-200">
-            <div className="relative w-full h-full">
-              {/* Main image container - completely isolated from animations */}
-              <div className="relative w-full h-full rounded-full overflow-hidden bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 p-[3px] z-20">
-                <div className="w-full h-full rounded-full bg-black p-1">
+      <div className="container mx-auto px-6 pt-12 pb-8 relative z-10">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+
+          {/* Left Column: Information, Copy & Actions (7 Cols on Desktop Left - Left-Aligned) */}
+          <div className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left space-y-5 animate-fadeIn delay-300 order-2 lg:order-1 pt-2 lg:pt-6">
+            {/* Availability / Subtitle Badge */}
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-gradient-to-r from-emerald-500/10 via-blue-500/10 to-purple-500/10 border border-emerald-500/30 rounded-full backdrop-blur-sm shadow-inner">
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+              <span className="text-xs sm:text-sm font-semibold text-emerald-300 tracking-wide uppercase">
+                Available for React Native Projects
+              </span>
+            </div>
+
+            {/* Name Heading */}
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight">
+              Hi, I'm{' '}
+              <span className="relative inline-block bg-gradient-to-r from-blue-400 via-purple-300 to-white bg-clip-text text-transparent">
+                Waleed Ahmad
+              </span>
+            </h1>
+
+            {/* Animated Role Badge */}
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-gradient-to-r from-blue-500/15 via-purple-500/15 to-pink-500/15 border border-purple-500/30 rounded-xl backdrop-blur-md">
+                <AtomIcon size={20} className="text-blue-400 animate-pulse" />
+                <h2 className="text-sm sm:text-base font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                  Mobile & Full-Stack Developer
+                </h2>
+              </div>
+            </div>
+
+            {/* Tagline */}
+            <p className="text-lg sm:text-xl font-bold text-blue-300 tracking-tight -mt-1">
+              Helping Businesses Build & Launch Reliable Mobile Apps
+            </p>
+
+            {/* Concise Value Description */}
+            <p className="text-base sm:text-lg text-gray-300 font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0">
+              Cross-platform React Native developer helping startups and businesses build, launch, and maintain <span className="text-blue-400 font-semibold">production-ready mobile applications</span> with seamless app store deployment.
+            </p>
+
+            {/* CTA Buttons */}
+            <div className="pt-2 flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-3 w-full">
+              <button
+                onClick={scrollToProjects}
+                className="w-full sm:w-auto group relative px-7 py-3.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/25 active:scale-95 cursor-pointer"
+              >
+                <div className="relative flex items-center justify-center gap-2 text-sm sm:text-base">
+                  View My Work
+                  <ArrowDown size={18} className="group-hover:translate-y-1 transition-transform duration-300" />
+                </div>
+              </button>
+
+              <a
+                href="/Waleed_Ahmad_CV.pdf"
+                download="Waleed_Ahmad_CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto group relative inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-transparent border border-blue-400/50 text-blue-400 rounded-xl font-semibold text-sm sm:text-base transition-all duration-300 hover:scale-105 backdrop-blur-sm hover:bg-blue-400/10 hover:border-blue-400 cursor-pointer"
+              >
+                <Download size={18} />
+                Download CV
+              </a>
+
+              <button
+                onClick={scrollToBooking}
+                className="w-full sm:w-auto group relative px-6 py-3.5 bg-gradient-to-r from-purple-600/20 to-pink-600/20 border border-purple-400/50 text-purple-300 rounded-xl font-semibold text-sm sm:text-base transition-all duration-300 hover:scale-105 backdrop-blur-sm hover:bg-purple-400/20 hover:border-purple-400 cursor-pointer"
+              >
+                <div className="relative flex items-center justify-center gap-2">
+                  <Calendar size={18} />
+                  Book Meeting
+                </div>
+              </button>
+            </div>
+
+            {/* Social Icons */}
+            <div className="flex items-center justify-center lg:justify-start gap-3 pt-1 w-full">
+              <a href="https://github.com/link2waleed" target="_blank" rel="noopener noreferrer"
+                className="group relative w-11 h-11 bg-gray-900/90 rounded-xl shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-blue-500/20 border border-gray-700/60 hover:border-blue-400/60"
+                aria-label="GitHub Profile">
+                <Github size={20} className="text-gray-300 group-hover:text-blue-400 transition-colors duration-300" />
+              </a>
+              <a href="https://www.linkedin.com/in/waleed-ahmad-140024288" target="_blank" rel="noopener noreferrer"
+                className="group relative w-11 h-11 bg-gray-900/90 rounded-xl shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-purple-500/20 border border-gray-700/60 hover:border-purple-400/60"
+                aria-label="LinkedIn Profile">
+                <Linkedin size={20} className="text-gray-300 group-hover:text-purple-400 transition-colors duration-300" />
+              </a>
+            </div>
+
+            {/* Credibility Trust Signal */}
+            <div className="flex items-center justify-center lg:justify-start gap-2 text-xs font-medium text-gray-400 pt-1 w-full">
+              <CheckCircle2 size={14} className="text-emerald-400 shrink-0" />
+              <span>Apps published on Apple App Store & Google Play</span>
+            </div>
+          </div>
+
+          {/* Right Column: Avatar Portrait surrounded by Pure Minimal Typography Stats (5 Cols on Desktop Right) */}
+          <div className="lg:col-span-5 flex justify-center lg:justify-end items-center relative animate-fadeIn delay-200 order-1 lg:order-2 mb-8 lg:mb-0 lg:pr-10 -mt-4 lg:-mt-6">
+            <div className="group relative w-72 h-72 sm:w-[380px] sm:h-[380px] lg:w-[410px] lg:h-[410px]">
+
+              {/* Outer Glow Backdrop */}
+              <div className="absolute -inset-4 rounded-full bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 blur-2xl group-hover:blur-3xl transition-all duration-500 animate-pulse" />
+
+              {/* Rotating Accent Ring */}
+              <div className="absolute -inset-3 rounded-full opacity-70 group-hover:opacity-100 transition-opacity duration-500">
+                <div className="w-full h-full rounded-full border-2 border-transparent animate-spin-slow" style={{
+                  background: 'conic-gradient(from 0deg, rgba(59, 130, 246, 0.6), rgba(147, 51, 234, 0.6), rgba(236, 72, 153, 0.6), rgba(59, 130, 246, 0.6))',
+                  maskImage: 'radial-gradient(circle at center, transparent 84%, black 86%, black 100%)',
+                  WebkitMaskImage: 'radial-gradient(circle at center, transparent 84%, black 86%, black 100%)'
+                }}></div>
+              </div>
+
+              {/* Main Circular Studio Avatar Container */}
+              <div className="relative w-full h-full rounded-full overflow-hidden bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 p-[3px] shadow-2xl z-20">
+                <div className="w-full h-full rounded-full bg-gradient-to-br from-[#0c0d16] via-[#121422] to-[#0a0a10] p-1 relative flex items-center justify-center overflow-hidden">
+                  {/* Studio Radial Spotlight behind head */}
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(99,102,241,0.35)_0%,rgba(168,85,247,0.22)_45%,transparent_75%)]" />
+
+                  {/* Transparent Prominent Portrait */}
                   <img
                     src="/assets/waleed.png"
                     alt="Waleed Ahmad"
                     loading="lazy"
-                    className="w-full h-full rounded-full object-cover"
+                    className="w-full h-full rounded-full object-cover object-bottom relative z-10 transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
               </div>
 
-              {/* Animated effects - positioned behind the image */}
-              <div className="absolute -inset-4 z-10">
-                {/* Rotating outer ring - behind image */}
-                <div className="absolute inset-0 rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-500">
-                  <div className="w-full h-full rounded-full border-2 border-transparent bg-gradient-to-r from-blue-400/50 via-purple-400/50 to-pink-400/50 animate-spin-slow" style={{
-                    background: 'conic-gradient(from 0deg, rgba(59, 130, 246, 0.5), rgba(147, 51, 234, 0.5), rgba(236, 72, 153, 0.5), rgba(59, 130, 246, 0.5))',
-                    maskImage: 'radial-gradient(circle at center, transparent 85%, black 87%, black 100%)',
-                    WebkitMaskImage: 'radial-gradient(circle at center, transparent 85%, black 87%, black 100%)'
-                  }}></div>
+              {/* Floating Micro Tech Stack Chips */}
+              {/* Left Top Pill: TypeScript */}
+              <div className="absolute top-14 -left-8 sm:-left-14 lg:-left-16 z-30 pointer-events-none hidden sm:block animate-float-3">
+                <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-bold border border-cyan-500/40 text-cyan-300 bg-[#090a10]/95 backdrop-blur-md shadow-lg shadow-black/60">
+                  <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
+                  <span>TypeScript</span>
                 </div>
-
-                {/* Pulsing glow effect - behind image */}
-                <div className="absolute inset-2 rounded-full bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 blur-xl group-hover:blur-2xl transition-all duration-500 animate-pulse"></div>
-
-                {/* Additional glow layers */}
-                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-400/10 via-purple-400/10 to-pink-400/10 blur-2xl group-hover:blur-3xl transition-all duration-500 animate-pulse delay-500"></div>
               </div>
+
+              {/* Left Mid Pill: React Native */}
+              <div className="absolute top-1/2 -left-16 sm:-left-28 lg:-left-34 -translate-y-8 z-30 pointer-events-none hidden sm:block animate-float-1">
+                <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-bold border border-blue-500/40 text-blue-300 bg-[#090a10]/95 backdrop-blur-md shadow-xl shadow-black/60">
+                  <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse"></span>
+                  <span>React Native</span>
+                </div>
+              </div>
+
+              {/* Left Bottom Pill: NestJS */}
+              <div className="absolute bottom-10 -left-8 sm:-left-14 lg:-left-16 z-30 pointer-events-none hidden sm:block animate-float-2">
+                <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-bold border border-red-500/40 text-red-300 bg-[#090a10]/95 backdrop-blur-md shadow-lg shadow-black/60">
+                  <span className="w-1.5 h-1.5 rounded-full bg-red-400 animate-pulse"></span>
+                  <span>NestJS</span>
+                </div>
+              </div>
+
+              {/* Right Top Pill: REST APIs */}
+              <div className="absolute top-14 -right-8 sm:-right-14 lg:-right-16 z-30 pointer-events-none hidden sm:block animate-float-2">
+                <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-bold border border-indigo-500/40 text-indigo-300 bg-[#090a10]/95 backdrop-blur-md shadow-lg shadow-black/60">
+                  <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 animate-pulse"></span>
+                  <span>REST APIs</span>
+                </div>
+              </div>
+
+              {/* Right Mid Pill: Firebase */}
+              <div className="absolute top-1/2 -right-12 sm:-right-20 lg:-right-24 -translate-y-8 z-30 pointer-events-none hidden sm:block animate-float-3">
+                <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-bold border border-amber-500/40 text-amber-300 bg-[#090a10]/95 backdrop-blur-md shadow-xl shadow-black/60">
+                  <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
+                  <span>Firebase</span>
+                </div>
+              </div>
+
+              {/* Right Bottom Pill: Expo */}
+              <div className="absolute bottom-10 -right-8 sm:-right-14 lg:-right-16 z-30 pointer-events-none hidden sm:block animate-float-4">
+                <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-bold border border-teal-500/40 text-teal-300 bg-[#090a10]/95 backdrop-blur-md shadow-lg shadow-black/60">
+                  <span className="w-1.5 h-1.5 rounded-full bg-teal-400 animate-pulse"></span>
+                  <span>Expo</span>
+                </div>
+              </div>
+
+              {/* Minimal Stat 1: Top-Left (2+ Experience) */}
+              <div className="absolute -top-3 -left-2 sm:-left-8 z-30 text-center pointer-events-none group-hover:-translate-y-1 transition-transform duration-300">
+                <div className="flex items-center justify-center gap-1 mb-0.5">
+                  <CheckCircle2 size={14} className="text-emerald-400 shrink-0" />
+                  <p className="text-lg sm:text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-300 leading-none">2+</p>
+                </div>
+                <p className="text-[9px] font-bold tracking-widest text-gray-400 uppercase">Years Exp</p>
+              </div>
+
+              {/* Minimal Stat 2: Top-Right (6 Production Apps - Highlighted Selling Point) */}
+              <div className="absolute -top-3.5 -right-2 sm:-right-8 z-30 text-center pointer-events-none group-hover:-translate-y-1 transition-transform duration-300">
+                <div className="flex items-center justify-center gap-1 mb-0.5 scale-105">
+                  <CheckCircle2 size={16} className="text-cyan-400 shrink-0 drop-shadow-[0_0_8px_rgba(34,211,238,0.6)]" />
+                  <p className="text-xl sm:text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-300 to-teal-300 leading-none drop-shadow-[0_0_12px_rgba(59,130,246,0.4)]">6+</p>
+                </div>
+                <p className="text-[9px] font-black tracking-widest text-cyan-300 uppercase">Apps Shipped</p>
+              </div>
+
+              {/* Minimal Stat 3: Bottom-Center (100% Store Approval) - Positioned below the avatar card */}
+              <div className="absolute top-full mt-3 sm:mt-4 left-1/2 -translate-x-1/2 z-30 text-center pointer-events-none group-hover:translate-y-1 transition-transform duration-300">
+                <div className="flex items-center justify-center gap-1 mb-0.5">
+                  <CheckCircle2 size={14} className="text-purple-400 shrink-0" />
+                  <p className="text-lg sm:text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-300 leading-none">100%</p>
+                </div>
+                <p className="text-[9px] font-bold tracking-widest text-gray-400 uppercase whitespace-nowrap">Store Approval</p>
+              </div>
+
             </div>
           </div>
 
-          {/* Enhanced Name with Premium Effects */}
-          <div className="relative mb-6 animate-fadeIn delay-300">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black mb-4 relative">
-              <span className="relative inline-block group cursor-default">
-                {/* Main text */}
-                <span className="relative z-10 bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent drop-shadow-sm">
-                  Waleed Ahmad
-                </span>
-                {/* Glow effect behind text */}
-                <span className="absolute inset-0 bg-gradient-to-r from-blue-400/30 via-purple-400/30 to-pink-400/30 bg-clip-text text-transparent blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  Waleed Ahmad
-                </span>
-                {/* Shimmer effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 w-0 group-hover:w-full transition-all duration-1000 opacity-0 group-hover:opacity-100"></div>
-              </span>
-            </h1>
-          </div>
+        </div>
 
-          {/* Advanced Animated Title */}
-          <div className="relative mb-8 animate-fadeIn delay-400">
-            <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-2xl backdrop-blur-sm">
-              <AtomIcon size={40} className="text-blue-400 animate-pulse" />
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">
-                <span className="relative">
-                  <span className="absolute inset-0 bg-gradient-to-r from-blue-400 via-purple-400 via-pink-400 to-emerald-400 bg-clip-text text-transparent animate-gradient-x blur-[1px] opacity-70"></span>
-                  <span className="relative bg-gradient-to-r from-blue-400 via-purple-400 via-pink-400 to-emerald-400 bg-clip-text text-transparent font-extrabold">
-                    React Native Developer
-                  </span>
-                </span>
-              </h2>
-            </div>
-          </div>
-
-          {/* Enhanced Description */}
-          <div className="space-y-4 mb-12 animate-fadeIn delay-500">
-            <p className="text-xl md:text-2xl text-gray-300 font-medium leading-relaxed">
-              Crafting Beautiful Cross-Platform Mobile Applications
-            </p>
-            <p className="text-lg text-gray-400 max-w-3xl mx-auto leading-relaxed">
-              Cross-platform mobile development specialist with expertise in Play Store deployments, complex debugging, and delivering client-grade solutions that perform.
-            </p>
-          </div>
-
-          {/* Modern CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 animate-fadeIn delay-700">
-            <a
-              href="/Waleed_Ahmad_CV.pdf"
-              download="Waleed_Ahmad_CV.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-2xl font-semibold overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black active:scale-95"
-            >
-              <Download size={20} />
-              Download CV
-            </a>
-            <button
-              onClick={scrollToProjects}
-              className="group relative px-8 py-4 bg-transparent border-2 border-blue-400/50 text-blue-400 rounded-2xl font-semibold overflow-hidden transition-all duration-300 hover:scale-105 backdrop-blur-sm hover:bg-blue-400/10 hover:border-blue-400"
-            >
-              <div className="relative flex items-center justify-center gap-2">
-                View My Work
-                <ArrowDown size={20} className="group-hover:translate-y-1 transition-transform duration-300" />
-              </div>
-            </button>
-            <button
-              onClick={scrollToBooking}
-              className="group relative px-8 py-4 bg-gradient-to-r from-purple-600/20 to-pink-600/20 border-2 border-purple-400/50 text-purple-400 rounded-2xl font-semibold overflow-hidden transition-all duration-300 hover:scale-105 backdrop-blur-sm hover:bg-purple-400/20 hover:border-purple-400 hover:text-purple-300"
-            >
-              <div className="relative flex items-center justify-center gap-2">
-                <Calendar size={20} />
-                Book a Meeting
-              </div>
-            </button>
-          </div>
-
-          {/* Enhanced Social Links */}
-          <div className="flex justify-center gap-6 animate-fadeIn delay-1000 mb-12">
-            <a href="https://github.com/link2waleed01-design" target="_blank" rel="noopener noreferrer"
-              className="group relative w-16 h-16 bg-gradient-to-br from-gray-800/80 to-gray-900/80 rounded-2xl shadow-xl flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-blue-500/25 border border-gray-700/50 hover:border-blue-400/50 backdrop-blur-md">
-              <Github size={26} className="text-gray-300 group-hover:text-blue-400 transition-colors duration-300 relative z-10" />
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 to-purple-500/0 group-hover:from-blue-500/10 group-hover:to-purple-500/10 rounded-2xl transition-all duration-300"></div>
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-400/0 to-purple-400/0 group-hover:from-blue-400/5 group-hover:to-purple-400/5 rounded-2xl blur-sm transition-all duration-300"></div>
-            </a>
-            <a href="https://www.linkedin.com/in/waleed-ahmad-140024288?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BwWL9qo3vS3ydKFUDxR74BQ%3D%3D" target="_blank" rel="noopener noreferrer"
-              className="group relative w-16 h-16 bg-gradient-to-br from-gray-800/80 to-gray-900/80 rounded-2xl shadow-xl flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-blue-500/25 border border-gray-700/50 hover:border-blue-400/50 backdrop-blur-md">
-              <Linkedin size={26} className="text-gray-300 group-hover:text-blue-400 transition-colors duration-300 relative z-10" />
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 to-purple-500/0 group-hover:from-blue-500/10 group-hover:to-purple-500/10 rounded-2xl transition-all duration-300"></div>
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-400/0 to-purple-400/0 group-hover:from-blue-400/5 group-hover:to-purple-400/5 rounded-2xl blur-sm transition-all duration-300"></div>
-            </a>
-          </div>
-
-          {/* Scroll Indicator */}
-          <div className="flex justify-center animate-fadeIn delay-1000">
-            <button
-              onClick={scrollToAbout}
-              className="p-2 text-gray-400 hover:text-blue-400 transition-colors duration-300 animate-bounce cursor-pointer"
-              aria-label="Scroll down"
-            >
-              <ArrowDown size={28} />
-            </button>
-          </div>
-
-          {/* Floating elements */}
-          <div className="absolute top-1/4 left-10 w-6 h-6 border border-purple-500/30 rounded-lg rotate-45 animate-bounce delay-1000"></div>
-          <div className="absolute top-1/3 right-10 w-4 h-4 border border-blue-500/30 rounded-full animate-ping delay-2000"></div>
-          <div className="absolute bottom-1/3 left-20 w-2 h-2 bg-emerald-500/30 rounded-full animate-pulse delay-3000"></div>
+        {/* Scroll Indicator */}
+        <div className="flex justify-center pt-8 animate-fadeIn delay-1000">
+          <button
+            onClick={scrollToProjects}
+            className="flex flex-col items-center gap-1.5 text-gray-400 hover:text-blue-400 transition-colors duration-300 animate-bounce cursor-pointer group"
+            aria-label="Scroll to projects"
+          >
+            <span className="text-[10px] font-bold tracking-widest text-gray-500 uppercase group-hover:text-blue-400 transition-colors">Explore</span>
+            <ArrowDown size={18} />
+          </button>
         </div>
       </div>
 
@@ -224,37 +299,35 @@ const Hero: React.FC = () => {
         .animate-spin-slow {
           animation: spin-slow 8s linear infinite;
         }
-        .animate-gradient-x {
-          animation: gradient-x 3s ease infinite;
-          background-size: 200% 200%;
-        }
         .animate-fadeIn {
           animation: fadeIn 0.8s ease-out forwards;
         }
-        .delay-200 {
-          animation-delay: 200ms;
+        @keyframes float-badge {
+          0%, 100% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-6px);
+          }
         }
-        .delay-300 {
-          animation-delay: 300ms;
+        .animate-float-1 {
+          animation: float-badge 5s ease-in-out infinite 0s;
         }
-        .delay-400 {
-          animation-delay: 400ms;
+        .animate-float-2 {
+          animation: float-badge 5s ease-in-out infinite 1.25s;
         }
-        .delay-500 {
-          animation-delay: 500ms;
+        .animate-float-3 {
+          animation: float-badge 5s ease-in-out infinite 2.5s;
         }
-        .delay-700 {
-          animation-delay: 700ms;
+        .animate-float-4 {
+          animation: float-badge 5s ease-in-out infinite 3.75s;
         }
-        .delay-1000 {
-          animation-delay: 1000ms;
-        }
-        .delay-2000 {
-          animation-delay: 2000ms;
-        }
-        .delay-3000 {
-          animation-delay: 3000ms;
-        }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+        .delay-400 { animation-delay: 400ms; }
+        .delay-500 { animation-delay: 500ms; }
+        .delay-700 { animation-delay: 700ms; }
+        .delay-1000 { animation-delay: 1000ms; }
       `}</style>
     </section>
   );

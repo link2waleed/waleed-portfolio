@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Waleed Ahmad - CV</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: #1f2937;
+      background-color: #ffffff;
+      width: 210mm;
+      height: 297mm;
+      padding: 28px 36px;
+      margin: 0 auto;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+      font-size: 11px;
+      line-height: 1.4;
+    }
+
+    /* Header */
+    header {
+      margin-bottom: 12px;
+      border-bottom: 1.5px solid #f3f4f6;
+      padding-bottom: 8px;
+    }
+
+    .name-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-baseline;
+      margin-bottom: 3px;
+    }
+
+    h1 {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: #111827;
+    }
+
+    .title {
+      font-size: 13px;
+      font-weight: 600;
+      color: #2563EB;
+    }
+
+    .contact-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11px;
+      color: #4b5563;
+      margin-top: 4px;
+    }
+
+    .links-group a {
+      color: #2563EB;
+      text-decoration: none;
+      font-weight: 500;
+      margin-left: 12px;
+    }
+
+    .links-group a:first-child {
+      margin-left: 0;
+    }
+
+    .links-group a:hover {
+      text-decoration: underline;
+    }
+
+    /* Section Styling */
+    section {
+      margin-bottom: 11px;
+    }
+
+    h2 {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #2563EB;
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 3px;
+      margin-bottom: 6px;
+    }
+
+    /* Summary */
+    .summary-text {
+      color: #374151;
+      font-size: 11px;
+      line-height: 1.45;
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 4px 16px;
+    }
+
+    .skill-item {
+      font-size: 11px;
+    }
+
+    .skill-label {
+      font-weight: 600;
+      color: #111827;
+    }
+
+    .skill-val {
+      color: #4b5563;
+    }
+
+    /* Experience & Projects */
+    .entry-item {
+      margin-bottom: 7.5px;
+    }
+
+    .entry-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2px;
+    }
+
+    .entry-title {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: #111827;
+    }
+
+    .entry-role {
+      font-weight: 600;
+      color: #4b5563;
+    }
+
+    .entry-date {
+      font-size: 10.5px;
+      color: #6b7280;
+      font-weight: 500;
+    }
+
+    .entry-link {
+      font-size: 10.5px;
+      color: #2563EB;
+      text-decoration: none;
+      font-weight: 500;
+      margin-left: 6px;
+    }
+
+    .inline-link {
+      font-size: 10.5px;
+      color: #2563EB;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    ul.bullet-list {
+      list-style-type: disc;
+      padding-left: 14px;
+      color: #374151;
+    }
+
+    ul.bullet-list li {
+      font-size: 10.5px;
+      line-height: 1.38;
+      margin-bottom: 1.5px;
+    }
+
+    /* Education */
+    .edu-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="name-row">
+      <h1>WALEED AHMAD</h1>
+      <span class="title">React Native Mobile Developer</span>
+    </div>
+    <div class="contact-row">
+      <span>Lahore, Pakistan &nbsp;•&nbsp; waleedwaris1234@gmail.com &nbsp;•&nbsp; +92 304 4204371</span>
+      <div class="links-group">
+        <a href="https://waleed-portfolio-delta.vercel.app/" target="_blank">Portfolio</a>
+        <a href="https://github.com/link2waleed" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/waleed-ahmad-140024288" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Summary -->
+  <section>
+    <h2>Professional Summary</h2>
+    <p class="summary-text">
+      React Native Mobile App Developer with hands-on experience building, scaling, and publishing 6+ production-ready
+      mobile applications on the Apple App Store and Google Play. Experienced in developing applications from scratch,
+      enhancing commercial React Native products, integrating NestJS APIs and Firebase services, and delivering
+      reliable, production-ready mobile solutions.
+    </p>
+  </section>
+
+  <!-- Technical Skills -->
+  <section>
+    <h2>Technical Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-item">
+        <span class="skill-label">Languages:</span> <span class="skill-val">JavaScript, TypeScript</span>
+      </div>
+      <div class="skill-item">
+        <span class="skill-label">Mobile Frameworks:</span> <span class="skill-val">React Native CLI, Expo</span>
+      </div>
+      <div class="skill-item">
+        <span class="skill-label">Backend & APIs:</span> <span class="skill-val">Node.js, NestJS, REST APIs</span>
+      </div>
+      <div class="skill-item">
+        <span class="skill-label">Database & Cloud:</span> <span class="skill-val">Firebase (Firestore, Cloud
+          Functions), PostgreSQL</span>
+      </div>
+      <div class="skill-item">
+        <span class="skill-label">State & Architecture:</span> <span class="skill-val">Redux Toolkit, Context API,
+          Offline Sync</span>
+      </div>
+      <div class="skill-item">
+        <span class="skill-label">Deployment & Tools:</span> <span class="skill-val">Google Play Console, Apple App
+          Store Connect, Git, GitHub</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work Experience -->
+  <section>
+    <h2>Commercial Experience</h2>
+
+    <div class="entry-item">
+      <div class="entry-header">
+        <div>
+          <span class="entry-title">Webwrite Pvt Limited</span>
+          <span class="entry-role">&nbsp;— Mobile & Full-Stack Developer</span>
+        </div>
+        <span class="entry-date">2026 – Present</span>
+      </div>
+      <ul class="bullet-list">
+        <li>Contributed to 2 commercial production applications (Ubamm Wellness & Fuel Stop), developing React Native
+          CLI mobile clients with Redux Toolkit and push notification schedulers.</li>
+        <li>Built and integrated NestJS REST APIs, JWT authentication, and database models to support mobile application
+          features.</li>
+        <li>Implemented offline data persistence, background synchronization, and performance optimizations to improve
+          application reliability and user experience.</li>
+      </ul>
+    </div>
+
+    <div class="entry-item">
+      <div class="entry-header">
+        <div>
+          <span class="entry-title">AJR Islamic App</span>
+          <span class="entry-role">&nbsp;— Lead React Native Developer</span>
+        </div>
+        <span class="entry-date">2026</span>
+      </div>
+      <ul class="bullet-list">
+        <li>Led the complete mobile development lifecycle, from architecture and feature implementation to successful
+          store publication.</li>
+        <li>Integrated Firebase (Firestore real-time sync & Cloud Functions), Context API state management, complex UI
+          animations, and automated notification triggers.</li>
+        <li>Published and maintained production releases live on the <a href="https://apps.apple.com/app/ajr-deen-accountability/id6758246710" class="inline-link" target="_blank">Apple App Store</a> and <a href="https://play.google.com/store/apps/details?id=com.my.AJR.android" class="inline-link" target="_blank">Google Play Store</a>.</li>
+      </ul>
+    </div>
+
+    <div class="entry-item">
+      <div class="entry-header">
+        <div>
+          <span class="entry-title">LetTech Partnership</span>
+          <span class="entry-role">&nbsp;— React Native Mobile Developer</span>
+        </div>
+        <span class="entry-date">2025 – Present</span>
+      </div>
+      <ul class="bullet-list">
+        <li>Engineered, published, and maintained 3 production mobile applications on the Google Play Store, managing
+          complete release cycles and Play Console compliance.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Featured Projects -->
+  <section>
+    <h2>Featured Projects</h2>
+
+    <div class="entry-item">
+      <div class="entry-header">
+        <div>
+          <span class="entry-title">AJR Deen Accountability</span>
+          <span class="entry-role">&nbsp;— Lead React Native Developer</span>
+          <a href="https://apps.apple.com/app/ajr-deen-accountability/id6758246710" class="entry-link"
+            target="_blank">App Store</a>
+          <a href="https://play.google.com/store/apps/details?id=com.my.AJR.android" class="entry-link"
+            target="_blank">Play Store</a>
+        </div>
+      </div>
+      <ul class="bullet-list">
+        <li>Built Islamic accountability app with React Native CLI, Context API, Firebase Firestore, Cloud Functions,
+          and push notifications.</li>
+      </ul>
+    </div>
+
+    <div class="entry-item">
+      <div class="entry-header">
+        <div>
+          <span class="entry-title">Fuel Stop</span>
+          <span class="entry-role">&nbsp;— React Native Developer (Webwrite Pvt Ltd)</span>
+        </div>
+        <span class="entry-date">Pre-Launch</span>
+      </div>
+      <ul class="bullet-list">
+        <li>Built driver-facing React Native CLI mobile frontend with Redux Toolkit and interactive Google Maps
+          geolocation tracking.</li>
+      </ul>
+    </div>
+
+    <div class="entry-item">
+      <div class="entry-header">
+        <div>
+          <span class="entry-title">Ubamm Wellness</span>
+          <span class="entry-role">&nbsp;— Full-Stack Developer (Webwrite Pvt Ltd)</span>
+        </div>
+        <span class="entry-date">Pre-Launch</span>
+      </div>
+      <ul class="bullet-list">
+        <li>Full-stack React Native CLI + NestJS application featuring custom health tracking modules, NestJS REST API
+          design, and background offline data sync.</li>
+      </ul>
+    </div>
+
+    <div class="entry-item">
+      <div class="entry-header">
+        <div>
+          <span class="entry-title">Scan2PDF</span>
+          <span class="entry-role">&nbsp;— Sole Developer & Owner</span>
+          <a href="https://play.google.com/store/apps/details?id=com.lettech.scanner" class="entry-link"
+            target="_blank">Google Play</a>
+        </div>
+      </div>
+      <ul class="bullet-list">
+        <li>Built document scanning and PDF generation app with React Native featuring fast scanning workflows, image
+          optimization, and OCR.</li>
+      </ul>
+    </div>
+
+    <div class="entry-item">
+      <div class="entry-header">
+        <div>
+          <span class="entry-title">WallNex</span>
+          <span class="entry-role">&nbsp;— Sole Developer & Owner</span>
+          <a href="https://play.google.com/store/apps/details?id=com.lettech.wallnex" class="entry-link"
+            target="_blank">Google Play</a>
+        </div>
+      </div>
+      <ul class="bullet-list">
+        <li>Built wallpaper personalization app with infinite scrolling, image caching, and a custom Kotlin native
+          module for instant wallpaper setting.</li>
+      </ul>
+    </div>
+
+    <div class="entry-item">
+      <div class="entry-header">
+        <div>
+          <span class="entry-title">Happy Stack Tower</span>
+          <span class="entry-role">&nbsp;— Sole Developer & Owner</span>
+          <a href="https://play.google.com/store/apps/details?id=com.lettech.happystacktower" class="entry-link"
+            target="_blank">Google Play</a>
+        </div>
+      </div>
+      <ul class="bullet-list">
+        <li>Developed 2D arcade stacking game in React Native with custom collision physics, Canvas graphics, and
+          progressive difficulty modes.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section>
+    <h2>Education</h2>
+    <div class="edu-row">
+      <div>
+        <span class="entry-title">Bachelors in Computer Science (BSCS)</span>
+        <span class="entry-role">&nbsp;— COMSATS University Islamabad (CUI), Lahore</span>
+      </div>
+      <span class="entry-date">Feb 2023 – Feb 2027 (Final Year)</span>
+    </div>
+  </section>
+
+</body>
+
+</html>

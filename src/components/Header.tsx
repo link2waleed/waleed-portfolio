@@ -10,7 +10,7 @@ const Header: React.FC = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
       
-      const sections = ['home', 'about', 'skills', 'projects', 'experience', 'contact'];
+      const sections = ['home', 'about', 'projects', 'experience', 'skills', 'contact'];
       const currentSection = sections.find(section => {
         const element = document.getElementById(section);
         if (element) {
@@ -41,29 +41,30 @@ const Header: React.FC = () => {
   const navigationItems = [
     { id: 'home', label: 'Home', icon: Home },
     { id: 'about', label: 'About', icon: User },
-    { id: 'skills', label: 'Skills', icon: Code },
     { id: 'projects', label: 'Projects', icon: Briefcase },
+    { id: 'experience', label: 'Experience', icon: Laptop },
+    { id: 'skills', label: 'Skills', icon: Code },
     { id: 'contact', label: 'Contact', icon: MessageCircle }
   ];
 
   const socialLinks = [
     { 
-      href: 'https://github.com/link2waleed01-design', 
+      href: 'https://github.com/link2waleed', 
       icon: Github, 
       label: 'GitHub', 
-      color: 'hover:text-gray-100 hover:bg-gray-700/50'
+      color: 'hover:text-white hover:bg-gray-800 hover:shadow-[0_0_14px_rgba(255,255,255,0.2)] border border-transparent hover:border-gray-700'
     },
     { 
       href: 'https://www.linkedin.com/in/waleed-ahmad-140024288', 
       icon: Linkedin, 
       label: 'LinkedIn', 
-      color: 'hover:text-blue-400 hover:bg-blue-900/30'
+      color: 'hover:text-blue-400 hover:bg-blue-950/50 hover:shadow-[0_0_14px_rgba(59,130,246,0.35)] border border-transparent hover:border-blue-500/30'
     },
     { 
       href: 'mailto:waleedwaris1234@gmail.com', 
       icon: Mail, 
       label: 'Email', 
-      color: 'hover:text-red-400 hover:bg-red-900/30'
+      color: 'hover:text-purple-400 hover:bg-purple-950/50 hover:shadow-[0_0_14px_rgba(168,85,247,0.35)] border border-transparent hover:border-purple-500/30'
     }
   ];
 
@@ -138,7 +139,7 @@ const Header: React.FC = () => {
                     className={`p-3 rounded-full transition-all duration-300 ${social.color} transform hover:scale-110 shadow-md hover:shadow-lg text-gray-300`}
                     title={social.label}
                   >
-                    <Icon size={18} />
+                    <Icon size={21} />
                   </a>
                 );
               })}
@@ -213,7 +214,7 @@ const Header: React.FC = () => {
                       className={`p-3 rounded-full transition-all duration-300 ${social.color} transform hover:scale-110 shadow-md hover:shadow-lg text-gray-300`}
                       title={social.label}
                     >
-                      <Icon size={18} />
+                      <Icon size={21} />
                     </a>
                   );
                 })}

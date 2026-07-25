@@ -109,7 +109,7 @@ const Contact: React.FC = () => {
   const socialLinks = [
     {
       name: 'GitHub',
-      href: 'https://github.com/link2waleed01-design',
+      href: 'https://github.com/link2waleed',
       icon: Github,
       color: 'hover:text-white hover:bg-gray-700'
     },

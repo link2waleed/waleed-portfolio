@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
   const socialLinks = [
     {
       name: 'GitHub',
-      href: 'https://github.com/link2waleed01-design',
+      href: 'https://github.com/link2waleed',
       icon: Github
     },
     {

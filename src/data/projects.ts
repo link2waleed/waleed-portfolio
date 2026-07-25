@@ -8,17 +8,79 @@ export interface Project {
   demoVideo: string;
   techStack: string[];
   features: string[];
-  playStoreUrl: string;
-  appStoreUrl: string;
+  playStoreUrl?: string;
+  appStoreUrl?: string;
   category: string;
-  stats: {
-    downloads: string;
-    rating: string;
-    reviews: string;
+  projectType: 'personal' | 'freelance' | 'company';
+  role: string;
+  company?: string;
+  isPublished: boolean;
+  stats?: {
+    downloads?: string;
+    rating?: string;
+    reviews?: string;
   };
 }
 
 export const projects: Project[] = [
+  {
+    id: 'ajr-islamic-app',
+    name: 'AJR Deen Accountability',
+    shortDescription: 'Comprehensive Islamic accountability and spiritual habit tracker app for daily prayers, Quran, and sunnah habits.',
+    fullDescription: 'Lead developer of a feature-rich Islamic accountability application built from scratch to publishing. Designed to help users track daily prayers, set Quran reading goals, monitor spiritual habits, and receive timely notifications. Implemented Firebase (Firestore & Cloud Functions) for real-time database sync, backend triggers, and automated notification delivery. Successfully led a team of developers to build and launch the app live on both the Apple App Store and Google Play Store.',
+    icon: '/assets/ajr-icon.png',
+    screenshots: ['/assets/ajr-icon.png'],
+    demoVideo: '/videos/ajr-demo.mp4',
+    techStack: ['React Native CLI', 'Firebase', 'TypeScript', 'Cloud Functions', 'Context API', 'Push Notifications'],
+    features: [
+      'Daily Prayer & Sunnah Accountability Tracker',
+      'Quran Reading Progress & Habit Goals',
+      'Firebase Firestore Real-Time Database Sync',
+      'Firebase Cloud Functions & Push Notifications',
+      'Complex UI Animations & Smooth Interactions',
+      'Deployed to Apple App Store & Google Play Store'
+    ],
+    playStoreUrl: 'https://play.google.com/store/apps/details?id=com.my.AJR.android&pcampaignid=web_share',
+    appStoreUrl: 'https://apps.apple.com/app/ajr-deen-accountability/id6758246710',
+    category: 'Lifestyle',
+    projectType: 'freelance',
+    role: 'Lead Mobile Developer',
+    company: 'Freelance Client Project',
+    isPublished: true,
+    stats: {
+      downloads: '1,000+',
+      rating: '5.0',
+      reviews: '50+'
+    }
+  },
+  {
+    id: 'fuel-stop',
+    name: 'Fuel Stop',
+    shortDescription: 'Logistics and fueling station discovery mobile app built with React Native CLI.',
+    fullDescription: 'Frontend mobile application developed under Webwrite Pvt Limited using React Native CLI. Enables drivers and fleet operators to discover nearby fuel stations, check real-time fuel availability & pricing, manage orders, and navigate efficiently with custom interactive maps.',
+    icon: '/assets/fuelstop-icon.png',
+    screenshots: ['/assets/fuelstop-icon.png'],
+    demoVideo: '/videos/fuelstop-demo.mp4',
+    techStack: ['React Native CLI', 'TypeScript', 'Redux Toolkit', 'Google Maps API', 'Geolocation Services'],
+    features: [
+      'Interactive fuel station locator with custom map markers',
+      'Real-time fuel availability & price tracking',
+      'Location-based search & nearby station filtering',
+      'Seamless turn-by-turn route navigation',
+      'Driver profile & fuel purchase logs',
+      'Dark-mode optimized UI tailored for on-the-go drivers'
+    ],
+    category: 'Logistics',
+    projectType: 'company',
+    role: 'React Native Developer (Frontend)',
+    company: 'Webwrite Pvt Limited',
+    isPublished: false,
+    stats: {
+      downloads: 'Pre-Launch',
+      rating: 'N/A',
+      reviews: 'Active Dev'
+    }
+  },
   {
     id: 'scan2pdf',
     name: 'Scan2PDF',
@@ -37,12 +99,43 @@ export const projects: Project[] = [
       'Document Manager'
     ],
     playStoreUrl: 'https://play.google.com/store/apps/details?id=com.lettech.scanner',
-    appStoreUrl: 'https://apps.apple.com/app/scan2pdf/id1234567890',
     category: 'Productivity',
+    projectType: 'personal',
+    role: 'Sole Developer & Copyright Owner',
+    company: 'LetTech Collaboration',
+    isPublished: true,
     stats: {
       downloads: '100+',
       rating: '4.9',
       reviews: '30+'
+    }
+  },
+  {
+    id: 'ubamm-wellness',
+    name: 'Ubamm Wellness',
+    shortDescription: 'Full-stack health & wellness platform featuring React Native CLI frontend and NestJS backend API.',
+    fullDescription: 'A modern, full-stack wellness platform developed under Webwrite Pvt Limited. Contributed as a full-stack engineer developing both the React Native CLI mobile client and NestJS backend architecture. Engineered scalable backend API design, contributed to Chewwise module development, implemented offline data sync & persistence, and achieved significant mobile app performance optimization.',
+    icon: '/assets/ubamm-icon.png',
+    screenshots: ['/assets/ubamm-icon.png'],
+    demoVideo: '/videos/ubamm-demo.mp4',
+    techStack: ['React Native CLI', 'NestJS', 'TypeScript', 'Redux Toolkit', 'Push Notifications', 'REST APIs'],
+    features: [
+      'Cross-platform mobile client with React Native CLI',
+      'Scalable backend API design with NestJS',
+      'Contribution to Chewwise module development',
+      'Offline data sync & background persistence',
+      'Significant app performance optimization',
+      'Push notifications & REST API integration'
+    ],
+    category: 'Health & Wellness',
+    projectType: 'company',
+    role: 'Full-Stack Developer (RN CLI + NestJS)',
+    company: 'Webwrite Pvt Limited',
+    isPublished: false,
+    stats: {
+      downloads: 'Pre-Launch',
+      rating: 'N/A',
+      reviews: 'Active Dev'
     }
   },
   {
@@ -63,8 +156,11 @@ export const projects: Project[] = [
       'Favorites collection'
     ],
     playStoreUrl: 'https://play.google.com/store/apps/details?id=com.lettech.wallnex',
-    appStoreUrl: 'https://apps.apple.com/app/wallpaper-downloader/id1234567891',
     category: 'Personalisation',
+    projectType: 'personal',
+    role: 'Sole Developer & Copyright Owner',
+    company: 'LetTech Collaboration',
+    isPublished: true,
     stats: {
       downloads: '100+',
       rating: '5.0',
@@ -89,8 +185,11 @@ export const projects: Project[] = [
       "Rewarded ads for bonus coins"
     ],
     playStoreUrl: 'https://play.google.com/store/apps/details?id=com.lettech.happystacktower',
-    appStoreUrl: 'https://apps.apple.com/app/quran-reader/id1234567892',
     category: 'Entertainment',
+    projectType: 'personal',
+    role: 'Sole Developer & Copyright Owner',
+    company: 'LetTech Collaboration',
+    isPublished: true,
     stats: {
       downloads: '10+',
       rating: '5.0',
