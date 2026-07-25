@@ -2,6 +2,41 @@ import React from 'react';
 import { ArrowDown, Download, Calendar, CheckCircle2, Award } from 'lucide-react';
 import AtomIcon from './AtomIcon';
 
+const AvailabilityBadge: React.FC<{ className?: string }> = ({ className = '' }) => (
+  <div className={`inline-flex items-center gap-2 px-3.5 py-1.5 bg-gradient-to-r from-emerald-500/10 via-blue-500/10 to-purple-500/10 border border-emerald-500/30 rounded-full backdrop-blur-sm shadow-inner ${className}`}>
+    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
+    <span className="text-xs sm:text-sm font-semibold text-emerald-300 tracking-wide">
+      Available for Freelance &amp; Contract Work
+    </span>
+  </div>
+);
+
+const StatCards: React.FC<{ className?: string }> = ({ className = '' }) => (
+  <div className={`flex flex-row flex-wrap items-center justify-center gap-3 sm:gap-4 relative z-20 ${className}`}>
+    <div className="group pointer-events-auto relative p-1 rounded-lg bg-gray-900/95 border border-emerald-500/30 backdrop-blur-md shadow-xl shadow-emerald-500/10 w-[110px] hover:border-emerald-400/50 hover:shadow-emerald-500/20 transition-all duration-300 cursor-default">
+      <div className="flex flex-col items-center px-2 py-2 border border-dashed border-emerald-500/40 rounded-md">
+        <Award size={20} className="text-emerald-400 mb-1 drop-shadow-[0_0_8px_rgba(52,211,153,0.8)]" />
+        <span className="text-lg sm:text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-300 leading-none">2+</span>
+        <span className="text-[8px] font-bold tracking-widest text-gray-400 uppercase mt-1 whitespace-nowrap text-center">Years Exp</span>
+      </div>
+    </div>
+    <div className="group pointer-events-auto relative p-1 rounded-lg bg-gray-900/95 border border-cyan-500/30 backdrop-blur-md shadow-xl shadow-cyan-500/10 w-[110px] hover:border-cyan-400/50 hover:shadow-cyan-500/20 transition-all duration-300 cursor-default">
+      <div className="flex flex-col items-center px-2 py-2 border border-dashed border-cyan-500/40 rounded-md">
+        <Award size={20} className="text-cyan-400 mb-1 drop-shadow-[0_0_8px_rgba(34,211,238,0.8)]" />
+        <span className="text-lg sm:text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-300 to-teal-300 leading-none">6+</span>
+        <span className="text-[8px] font-black tracking-widest text-cyan-300 uppercase mt-1 whitespace-nowrap text-center">Apps Shipped</span>
+      </div>
+    </div>
+    <div className="group pointer-events-auto relative p-1 rounded-lg bg-gray-900/95 border border-purple-400/30 backdrop-blur-md shadow-xl shadow-purple-500/10 w-[110px] hover:border-purple-400/50 hover:shadow-purple-400/20 transition-all duration-300 cursor-default">
+      <div className="flex flex-col items-center px-2 py-2 border border-dashed border-purple-400/40 rounded-md h-full justify-center">
+        <Award size={20} className="text-purple-400 mb-1 drop-shadow-[0_0_8px_rgba(168,85,247,0.8)]" />
+        <span className="text-lg sm:text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-300 to-purple-400 leading-none">100%</span>
+        <span className="text-[8px] font-bold tracking-widest text-gray-300 uppercase mt-1 whitespace-nowrap text-center">Store Approval</span>
+      </div>
+    </div>
+  </div>
+);
+
 const Hero: React.FC = () => {
   const scrollToProjects = () => {
     const element = document.getElementById('projects');
@@ -29,18 +64,19 @@ const Hero: React.FC = () => {
       </div>
 
       <div className="container mx-auto px-6 pt-12 pb-8 relative z-10">
+        
+        {/* MOBILE ONLY: Availability Badge */}
+        <div className="flex justify-center mb-10 lg:hidden">
+          <AvailabilityBadge />
+        </div>
+
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
 
           {/* LEFT COLUMN */}
           <div className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left animate-fadeIn delay-300 order-2 lg:order-1 pt-6 lg:pt-9">
 
             {/* Availability Badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-gradient-to-r from-emerald-500/10 via-blue-500/10 to-purple-500/10 border border-emerald-500/30 rounded-full backdrop-blur-sm shadow-inner">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
-              <span className="text-xs sm:text-sm font-semibold text-emerald-300 tracking-wide">
-                Available for Freelance &amp; Contract Work
-              </span>
-            </div>
+            <AvailabilityBadge className="hidden lg:inline-flex" />
 
             {/* Name */}
             <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight">
@@ -82,24 +118,25 @@ const Hero: React.FC = () => {
               <div className="flex flex-wrap justify-center lg:justify-start items-center gap-8 sm:gap-14">
                 <div className="group relative flex items-center justify-center transition-all duration-300 cursor-pointer">
                   <div className="absolute inset-0 bg-white/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity blur-2xl"></div>
-                  <img src="/assets/webwrite-icon.png" alt="Webwrite" className="h-11 sm:h-14 object-contain drop-shadow-[0_0_12px_rgba(255,255,255,0.2)] transition-all duration-500 transform group-hover:scale-110 group-hover:drop-shadow-[0_0_20px_rgba(255,255,255,0.4)] relative z-10" />
+                  <img src="/assets/webwrite-icon.png" alt="Webwrite" className="h-11 sm:h-14 rounded-xl sm:rounded-2xl object-contain drop-shadow-[0_0_12px_rgba(255,255,255,0.2)] transition-all duration-500 transform group-hover:scale-110 group-hover:drop-shadow-[0_0_20px_rgba(255,255,255,0.4)] relative z-10" />
                 </div>
 
                 <div className="group relative flex items-center justify-center transition-all duration-300 cursor-pointer">
                   <div className="absolute inset-0 bg-white/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity blur-2xl"></div>
-                  <img src="/assets/ajr-icon.png" alt="AJR" className="h-11 sm:h-14 object-contain drop-shadow-[0_0_12px_rgba(255,255,255,0.2)] transition-all duration-500 transform group-hover:scale-110 group-hover:drop-shadow-[0_0_20px_rgba(255,255,255,0.4)] relative z-10" />
+                  <img src="/assets/ajr-icon.png" alt="AJR" className="h-11 sm:h-14 rounded-xl sm:rounded-2xl object-contain drop-shadow-[0_0_12px_rgba(255,255,255,0.2)] transition-all duration-500 transform group-hover:scale-110 group-hover:drop-shadow-[0_0_20px_rgba(255,255,255,0.4)] relative z-10" />
                 </div>
 
                 <div className="group relative flex items-center justify-center transition-all duration-300 cursor-pointer">
                   <div className="absolute inset-0 bg-white/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity blur-2xl"></div>
-                  <img src="/assets/lettech-icon.png" alt="LetTech" className="h-12 sm:h-16 scale-110 object-contain drop-shadow-[0_0_12px_rgba(255,255,255,0.2)] transition-all duration-500 transform group-hover:scale-125 group-hover:drop-shadow-[0_0_20px_rgba(255,255,255,0.4)] relative z-10" />
+                  <img src="/assets/lettech-icon.png" alt="LetTech" className="h-12 sm:h-16 rounded-full object-contain drop-shadow-[0_0_12px_rgba(255,255,255,0.2)] transition-all duration-500 transform group-hover:scale-110 group-hover:drop-shadow-[0_0_20px_rgba(255,255,255,0.4)] relative z-10" />
                 </div>
               </div>
             </div>
-
+            {/* MOBILE ONLY: Stat Cards above CTA */}
+            <StatCards className="mt-4 mb-4 lg:hidden w-full" />
 
             {/* CTA BUTTONS */}
-            <div className="mt-8 flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-4 w-full">
+            <div className="mt-6 flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-4 w-full">
 
               {/* Primary */}
               <button
@@ -173,35 +210,7 @@ const Hero: React.FC = () => {
               </div>
 
               {/* === STAT CARDS ROW (Below Avatar) === */}
-              <div className="flex flex-row flex-wrap items-center justify-center gap-3 sm:gap-4 relative z-20">
-                {/* Left Card: 2+ Years Exp */}
-                <div className="group pointer-events-auto relative p-1 rounded-lg bg-gray-900/95 border border-emerald-500/30 backdrop-blur-md shadow-xl shadow-emerald-500/10 w-[110px] hover:border-emerald-400/50 hover:shadow-emerald-500/20 transition-all duration-300 cursor-default">
-                  <div className="flex flex-col items-center px-2 py-2 border border-dashed border-emerald-500/40 rounded-md">
-                    <Award size={20} className="text-emerald-400 mb-1 drop-shadow-[0_0_8px_rgba(52,211,153,0.8)]" />
-                    <span className="text-lg sm:text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-300 leading-none">2+</span>
-                    <span className="text-[8px] font-bold tracking-widest text-gray-400 uppercase mt-1 whitespace-nowrap text-center">Years Exp</span>
-                  </div>
-                </div>
-
-                {/* Right Card: 6+ Apps Shipped */}
-                <div className="group pointer-events-auto relative p-1 rounded-lg bg-gray-900/95 border border-cyan-500/30 backdrop-blur-md shadow-xl shadow-cyan-500/10 w-[110px] hover:border-cyan-400/50 hover:shadow-cyan-500/20 transition-all duration-300 cursor-default">
-                  <div className="flex flex-col items-center px-2 py-2 border border-dashed border-cyan-500/40 rounded-md">
-                    <Award size={20} className="text-cyan-400 mb-1 drop-shadow-[0_0_8px_rgba(34,211,238,0.8)]" />
-                    <span className="text-lg sm:text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-300 to-teal-300 leading-none">6+</span>
-                    <span className="text-[8px] font-black tracking-widest text-cyan-300 uppercase mt-1 whitespace-nowrap text-center">Apps Shipped</span>
-                  </div>
-                </div>
-
-
-                {/* Bottom Card: 100% Store Approval */}
-                <div className="group pointer-events-auto relative p-1 rounded-lg bg-gray-900/95 border border-purple-400/30 backdrop-blur-md shadow-xl shadow-purple-500/10 w-[110px] hover:border-purple-400/50 hover:shadow-purple-500/20 transition-all duration-300 cursor-default">
-                  <div className="flex flex-col items-center px-2 py-2 border border-dashed border-purple-400/40 rounded-md h-full justify-center">
-                    <Award size={20} className="text-purple-400 mb-1 drop-shadow-[0_0_8px_rgba(168,85,247,0.8)]" />
-                    <span className="text-lg sm:text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-300 to-purple-400 leading-none">100%</span>
-                    <span className="text-[8px] font-bold tracking-widest text-gray-300 uppercase mt-1 whitespace-nowrap text-center">Store Approval</span>
-                  </div>
-                </div>
-              </div>
+              <StatCards className="mt-8 hidden lg:flex" />
             </div>
           </div>
 

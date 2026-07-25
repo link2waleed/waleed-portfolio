@@ -37,11 +37,11 @@ const Experience: React.FC = () => {
             iconBg: 'bg-gray-900 border border-gray-700/60 p-0 rounded-2xl',
             highlights: [
                 {
-                    title: 'Complete Lifecycle Leadership',
+                    title: 'Development Lifecycle',
                     desc: <>Led the complete mobile development lifecycle in <strong className="text-white font-semibold">React Native (Expo Bare Workflow)</strong>, guiding a team from initial architecture to successful global store publication.</>
                 },
                 {
-                    title: 'Firebase & Cloud Services',
+                    title: 'Firebase Services',
                     desc: <>Integrated <strong className="text-white font-semibold">Firebase (Firestore & Cloud Functions)</strong>, <strong className="text-white font-semibold">Context API</strong> state management, complex UI animations, and automated notification triggers.</>
                 },
                 {
@@ -65,11 +65,11 @@ const Experience: React.FC = () => {
                     desc: <>Designed, engineered, and maintained Scan2PDF, Wallnex, and Happy Stack Tower from scratch using <strong className="text-white font-semibold">React Native (Expo)</strong>.</>
                 },
                 {
-                    title: 'Custom Architecture & Modules',
+                    title: 'Custom Modules',
                     desc: <>Engineered custom <strong className="text-white font-semibold">Kotlin native modules</strong>, optimized image caching pipelines, document scanning workflows, and Canvas-based arcade game physics.</>
                 },
                 {
-                    title: 'Ownership & Store Distribution',
+                    title: 'Store Distribution',
                     desc: <>Retained 100% copyright ownership of application source code while publishing and maintaining 3 production mobile apps on the <strong className="text-white font-semibold">Google Play Store</strong>.</>
                 }
             ]
