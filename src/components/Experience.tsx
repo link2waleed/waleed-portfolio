@@ -10,8 +10,8 @@ const Experience: React.FC = () => {
             period: '2026 – Present',
             badge: 'Commercial Experience',
             badgeColor: 'bg-purple-500/10 text-purple-400 border-purple-500/30',
-            icon: <Briefcase size={24} className="text-white" />,
-            iconBg: 'from-purple-500 to-indigo-600',
+            icon: <img src="/assets/webwrite-icon.png" alt="Webwrite Logo" className="w-full h-full rounded-2xl object-cover" />,
+            iconBg: 'bg-gray-900 border border-gray-700/60 p-0 rounded-2xl',
             highlights: [
                 {
                     title: 'Commercial Products',
@@ -33,8 +33,8 @@ const Experience: React.FC = () => {
             period: '2026',
             badge: 'Published on iOS & Android',
             badgeColor: 'bg-emerald-500/10 text-emerald-400 border-emerald-500/30',
-            icon: <img src="/assets/ajr-icon.png" alt="AJR App Logo" className="w-14 h-14 rounded-2xl object-cover" />,
-            iconBg: 'bg-gray-900 border border-gray-700/60 p-0',
+            icon: <img src="/assets/ajr-icon.png" alt="AJR App Logo" className="w-full h-full rounded-2xl object-cover" />,
+            iconBg: 'bg-gray-900 border border-gray-700/60 p-0 rounded-2xl',
             highlights: [
                 {
                     title: 'Complete Lifecycle Leadership',
@@ -56,8 +56,9 @@ const Experience: React.FC = () => {
             period: '2025 – Present',
             badge: 'Copyright Owner',
             badgeColor: 'bg-blue-500/10 text-blue-400 border-blue-500/30',
-            icon: <Award size={24} className="text-white" />,
-            iconBg: 'from-blue-500 to-cyan-600',
+            icon: <img src="/assets/lettech-icon.png" alt="LetTech Logo" className="w-full h-full rounded-full object-cover" />,
+            iconBg: 'bg-gray-900 border border-gray-700/60 p-0 rounded-full',
+            iconSize: 'w-16 h-16',
             highlights: [
                 {
                     title: 'Solo Product Creation',
@@ -111,7 +112,7 @@ const Experience: React.FC = () => {
                                 {/* Header Info */}
                                 <div className="flex flex-wrap items-start justify-between gap-4 mb-8 pb-6 border-b border-gray-800/80 relative z-10">
                                     <div className="flex items-center gap-4">
-                                        <div className={`w-14 h-14 bg-gradient-to-br ${exp.iconBg} rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg overflow-hidden`}>
+                                        <div className={`${exp.iconSize || 'w-14 h-14'} bg-gradient-to-br ${exp.iconBg} flex items-center justify-center flex-shrink-0 shadow-lg overflow-hidden`}>
                                             {exp.icon}
                                         </div>
                                         <div>

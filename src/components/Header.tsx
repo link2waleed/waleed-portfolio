@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Github, Linkedin, Mail, Code, User, Briefcase, MessageCircle, Home, Laptop } from 'lucide-react';
+import { Menu, X, Github, Linkedin, Mail, Code, User, Briefcase, MessageCircle, Home, Laptop, MapPin } from 'lucide-react';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -83,12 +83,13 @@ const Header: React.FC = () => {
               <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center shadow-md group-hover:shadow-lg transition-all duration-300">
                 <Laptop size={18} className="text-white" />
               </div>
-              <div className="hidden sm:block">
-                <div className="text-2xl font-black bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+              <div className="hidden sm:flex flex-col justify-center">
+                <div className="text-2xl font-black bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent leading-none mb-1">
                   Waleed
                 </div>
-                <div className="text-xs font-medium -mt-1 text-gray-300">
-                  React Native Developer
+                <div className="flex items-center gap-1.5 text-[11px] font-semibold tracking-wide text-gray-400 uppercase">
+                  <MapPin size={12} className="text-purple-400" />
+                  <span>Lahore &bull; Pakistan</span>
                 </div>
               </div>
             </div>
