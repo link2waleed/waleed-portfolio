@@ -70,10 +70,10 @@ const Hero: React.FC = () => {
           <AvailabilityBadge />
         </div>
 
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8 items-center lg:items-end">
 
           {/* LEFT COLUMN */}
-          <div className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left animate-fadeIn delay-300 order-2 lg:order-1 pt-6 lg:pt-9">
+          <div className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left animate-fadeIn delay-300 order-2 lg:order-1 pt-0 lg:pt-9">
 
             {/* Availability Badge */}
             <AvailabilityBadge className="hidden lg:inline-flex" />
@@ -176,7 +176,7 @@ const Hero: React.FC = () => {
           </div>
 
           {/* RIGHT COLUMN */}
-          <div className="lg:col-span-5 flex justify-center lg:justify-end items-center relative animate-fadeIn delay-200 order-1 lg:order-2 mb-8 lg:mb-0 lg:pr-10 pt-10 lg:pt-20">
+          <div className="lg:col-span-5 flex justify-center lg:justify-end items-center relative animate-fadeIn delay-200 order-1 lg:order-2 lg:pr-10 pt-10 lg:pt-20">
             <div className="flex flex-col items-center gap-6 sm:gap-8">
               <div className="group relative w-[280px] h-[280px] sm:w-[360px] sm:h-[360px] lg:w-[400px] lg:h-[400px]">
 
