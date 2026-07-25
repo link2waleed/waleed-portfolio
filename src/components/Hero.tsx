@@ -49,12 +49,12 @@ const Hero: React.FC = () => {
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
 
           {/* Left Column: Information, Copy & Actions (7 Cols on Desktop Left - Left-Aligned) */}
-          <div className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left space-y-5 animate-fadeIn delay-300 order-2 lg:order-1 pt-2 lg:pt-6">
+          <div className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left space-y-6 sm:space-y-7 animate-fadeIn delay-300 order-2 lg:order-1 pt-6 lg:pt-9">
             {/* Availability / Subtitle Badge */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-gradient-to-r from-emerald-500/10 via-blue-500/10 to-purple-500/10 border border-emerald-500/30 rounded-full backdrop-blur-sm shadow-inner">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-              <span className="text-xs sm:text-sm font-semibold text-emerald-300 tracking-wide uppercase">
-                Available for React Native Projects
+              <span className="text-xs sm:text-sm font-semibold text-emerald-300 tracking-wide">
+                Available for New Projects
               </span>
             </div>
 
@@ -67,7 +67,7 @@ const Hero: React.FC = () => {
             </h1>
 
             {/* Animated Role Badge */}
-            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3">
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-1">
               <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-gradient-to-r from-blue-500/15 via-purple-500/15 to-pink-500/15 border border-purple-500/30 rounded-xl backdrop-blur-md">
                 <AtomIcon size={20} className="text-blue-400 animate-pulse" />
                 <h2 className="text-sm sm:text-base font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -77,23 +77,23 @@ const Hero: React.FC = () => {
             </div>
 
             {/* Tagline */}
-            <p className="text-lg sm:text-xl font-bold text-blue-300 tracking-tight -mt-1">
+            <p className="text-lg sm:text-xl font-bold text-blue-300 tracking-tight pt-1">
               Helping Businesses Build & Launch Reliable Mobile Apps
             </p>
 
-            {/* Concise Value Description */}
-            <p className="text-base sm:text-lg text-gray-300 font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            {/* Concise Value Description (Single clean highlight) */}
+            <p className="text-base sm:text-lg text-gray-300 font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0 pt-1">
               Cross-platform React Native developer helping startups and businesses build, launch, and maintain <span className="text-blue-400 font-semibold">production-ready mobile applications</span> with seamless app store deployment.
             </p>
 
             {/* CTA Buttons */}
-            <div className="pt-2 flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-3 w-full">
+            <div className="pt-3 flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-3.5 w-full">
               <button
                 onClick={scrollToProjects}
                 className="w-full sm:w-auto group relative px-7 py-3.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/25 active:scale-95 cursor-pointer"
               >
                 <div className="relative flex items-center justify-center gap-2 text-sm sm:text-base">
-                  View My Work
+                  Explore Projects
                   <ArrowDown size={18} className="group-hover:translate-y-1 transition-transform duration-300" />
                 </div>
               </button>
@@ -120,17 +120,17 @@ const Hero: React.FC = () => {
               </button>
             </div>
 
-            {/* Social Icons */}
-            <div className="flex items-center justify-center lg:justify-start gap-3 pt-1 w-full">
+            {/* Social Icons (50px containers for enhanced clickability) */}
+            <div className="flex items-center justify-center lg:justify-start gap-3.5 pt-2 w-full">
               <a href="https://github.com/link2waleed" target="_blank" rel="noopener noreferrer"
-                className="group relative w-11 h-11 bg-gray-900/90 rounded-xl shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-blue-500/20 border border-gray-700/60 hover:border-blue-400/60"
+                className="group relative w-12 h-12 sm:w-[50px] sm:h-[50px] bg-gray-900/90 rounded-xl shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-blue-500/20 border border-gray-700/60 hover:border-blue-400/60"
                 aria-label="GitHub Profile">
-                <Github size={20} className="text-gray-300 group-hover:text-blue-400 transition-colors duration-300" />
+                <Github size={22} className="text-gray-300 group-hover:text-blue-400 transition-colors duration-300" />
               </a>
               <a href="https://www.linkedin.com/in/waleed-ahmad-140024288" target="_blank" rel="noopener noreferrer"
-                className="group relative w-11 h-11 bg-gray-900/90 rounded-xl shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-purple-500/20 border border-gray-700/60 hover:border-purple-400/60"
+                className="group relative w-12 h-12 sm:w-[50px] sm:h-[50px] bg-gray-900/90 rounded-xl shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-purple-500/20 border border-gray-700/60 hover:border-purple-400/60"
                 aria-label="LinkedIn Profile">
-                <Linkedin size={20} className="text-gray-300 group-hover:text-purple-400 transition-colors duration-300" />
+                <Linkedin size={22} className="text-gray-300 group-hover:text-purple-400 transition-colors duration-300" />
               </a>
             </div>
 
@@ -142,8 +142,8 @@ const Hero: React.FC = () => {
           </div>
 
           {/* Right Column: Avatar Portrait surrounded by Pure Minimal Typography Stats (5 Cols on Desktop Right) */}
-          <div className="lg:col-span-5 flex justify-center lg:justify-end items-center relative animate-fadeIn delay-200 order-1 lg:order-2 mb-8 lg:mb-0 lg:pr-10 -mt-4 lg:-mt-6">
-            <div className="group relative w-72 h-72 sm:w-[380px] sm:h-[380px] lg:w-[410px] lg:h-[410px]">
+          <div className="lg:col-span-5 flex justify-center lg:justify-end items-center relative animate-fadeIn delay-200 order-1 lg:order-2 mb-8 lg:mb-0 lg:pr-10">
+            <div className="group relative w-64 h-64 sm:w-[340px] sm:h-[340px] lg:w-[370px] lg:h-[370px]">
 
               {/* Outer Glow Backdrop */}
               <div className="absolute -inset-4 rounded-full bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 blur-2xl group-hover:blur-3xl transition-all duration-500 animate-pulse" />
