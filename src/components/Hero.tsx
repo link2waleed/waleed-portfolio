@@ -64,7 +64,7 @@ const Hero: React.FC = () => {
       </div>
 
       <div className="container mx-auto px-6 pt-12 pb-8 relative z-10">
-        
+
         {/* MOBILE ONLY: Availability Badge */}
         <div className="flex justify-center mb-10 lg:hidden">
           <AvailabilityBadge />
@@ -108,35 +108,33 @@ const Hero: React.FC = () => {
             </p>
 
             {/* Trusted By Section (Left Column) */}
-            <div className="mt-6 animate-fadeIn delay-1000">
-              <div className="flex items-center justify-center lg:justify-start gap-4 mb-6">
+            <div className="mt-6 lg:mt-10">
+              <div className="flex items-center justify-center lg:justify-start gap-4 mb-6 opacity-0 animate-fadeIn delay-1000">
                 <div className="h-px bg-gradient-to-r from-transparent to-gray-600 flex-1 max-w-[40px] lg:hidden"></div>
                 <h3 className="text-xs sm:text-sm font-black tracking-[0.2em] text-transparent bg-clip-text bg-gradient-to-r from-gray-100 to-gray-300 uppercase">Trusted By Companies</h3>
-                {/* <div className="h-px bg-gradient-to-r from-gray-600 to-transparent flex-1 max-w-[120px] hidden sm:block"></div> */}
               </div>
 
               <div className="flex flex-wrap justify-center lg:justify-start items-center gap-8 sm:gap-14">
-                <div className="group relative flex items-center justify-center transition-all duration-300 cursor-pointer">
+                <div className="group relative flex items-center justify-center transition-all duration-300 cursor-pointer opacity-0 animate-scaleIn delay-1000">
                   <div className="absolute inset-0 bg-white/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity blur-2xl"></div>
                   <img src="/assets/webwrite-icon.png" alt="Webwrite" className="h-11 sm:h-14 rounded-xl sm:rounded-2xl object-contain drop-shadow-[0_0_12px_rgba(255,255,255,0.2)] transition-all duration-500 transform group-hover:scale-110 group-hover:drop-shadow-[0_0_20px_rgba(255,255,255,0.4)] relative z-10" />
                 </div>
 
-                <div className="group relative flex items-center justify-center transition-all duration-300 cursor-pointer">
+                <div className="group relative flex items-center justify-center transition-all duration-300 cursor-pointer opacity-0 animate-scaleIn delay-1100">
                   <div className="absolute inset-0 bg-white/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity blur-2xl"></div>
                   <img src="/assets/ajr-icon.png" alt="AJR" className="h-11 sm:h-14 rounded-xl sm:rounded-2xl object-contain drop-shadow-[0_0_12px_rgba(255,255,255,0.2)] transition-all duration-500 transform group-hover:scale-110 group-hover:drop-shadow-[0_0_20px_rgba(255,255,255,0.4)] relative z-10" />
                 </div>
 
-                <div className="group relative flex items-center justify-center transition-all duration-300 cursor-pointer">
+                <div className="group relative flex items-center justify-center transition-all duration-300 cursor-pointer opacity-0 animate-scaleIn delay-1200">
                   <div className="absolute inset-0 bg-white/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity blur-2xl"></div>
                   <img src="/assets/lettech-icon.png" alt="LetTech" className="h-12 sm:h-16 rounded-full object-contain drop-shadow-[0_0_12px_rgba(255,255,255,0.2)] transition-all duration-500 transform group-hover:scale-110 group-hover:drop-shadow-[0_0_20px_rgba(255,255,255,0.4)] relative z-10" />
                 </div>
               </div>
             </div>
-            {/* MOBILE ONLY: Stat Cards above CTA */}
-            <StatCards className="mt-4 mb-4 lg:hidden w-full" />
+
 
             {/* CTA BUTTONS */}
-            <div className="mt-6 flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-4 w-full">
+            <div className="mt-6 lg:mt-8 flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-4 w-full">
 
               {/* Primary */}
               <button
@@ -210,7 +208,7 @@ const Hero: React.FC = () => {
               </div>
 
               {/* === STAT CARDS ROW (Below Avatar) === */}
-              <StatCards className="mt-8 hidden lg:flex" />
+              <StatCards className="mt-8 lg:mt-3" />
             </div>
           </div>
 
@@ -238,12 +236,17 @@ const Hero: React.FC = () => {
           from { opacity: 0; transform: translateY(30px); }
           to { opacity: 1; transform: translateY(0); }
         }
+        @keyframes scaleIn {
+          from { opacity: 0; transform: scale(0.5); }
+          to { opacity: 1; transform: scale(1); }
+        }
         @keyframes float-badge {
           0%, 100% { transform: translateY(0px); }
           50% { transform: translateY(-6px); }
         }
         .animate-spin-slow { animation: spin-slow 8s linear infinite; }
         .animate-fadeIn { animation: fadeIn 0.8s ease-out forwards; }
+        .animate-scaleIn { animation: scaleIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
         .animate-float-1 { animation: float-badge 5s ease-in-out infinite 0s; }
         .animate-float-2 { animation: float-badge 5s ease-in-out infinite 1.25s; }
         .animate-float-3 { animation: float-badge 5s ease-in-out infinite 2.5s; }
@@ -254,6 +257,8 @@ const Hero: React.FC = () => {
         .delay-500 { animation-delay: 500ms; }
         .delay-700 { animation-delay: 700ms; }
         .delay-1000 { animation-delay: 1000ms; }
+        .delay-1100 { animation-delay: 1100ms; }
+        .delay-1200 { animation-delay: 1200ms; }
       `}</style>
     </section>
   );
