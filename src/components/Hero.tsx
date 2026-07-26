@@ -127,7 +127,7 @@ const Hero: React.FC = () => {
 
                 <div className="group relative flex items-center justify-center transition-all duration-300 cursor-pointer opacity-0 animate-scaleIn delay-1200">
                   <div className="absolute inset-0 bg-white/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity blur-2xl"></div>
-                  <img src="/assets/lettech-icon.png" alt="LetTech" className="h-12 sm:h-16 rounded-full object-contain drop-shadow-[0_0_12px_rgba(255,255,255,0.2)] transition-all duration-500 transform group-hover:scale-110 group-hover:drop-shadow-[0_0_20px_rgba(255,255,255,0.4)] relative z-10" />
+                  <img src="/assets/lettech-icon.png" alt="LetTech" className="h-12 sm:h-16 rounded-full object-contain drop-shadow-[0_0_8px_rgba(255,255,255,0.1)] transition-all duration-500 transform group-hover:scale-110 group-hover:drop-shadow-[0_0_16px_rgba(255,255,255,0.25)] relative z-10" />
                 </div>
               </div>
             </div>

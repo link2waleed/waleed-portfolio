@@ -21,7 +21,7 @@ const Skills: React.FC = () => {
     { name: 'Node.js & REST APIs', icon: Server, color: 'from-emerald-600 to-green-700' },
     { name: 'NestJS', icon: Server, color: 'from-red-500 to-rose-600' },
     { name: 'Redux Toolkit', icon: Layers, color: 'from-purple-500 to-pink-500' },
-    { name: 'JavaScript (ES6+)', icon: Terminal, color: 'from-yellow-400 to-yellow-600' },
+    { name: 'JavaScript', icon: Terminal, color: 'from-yellow-400 to-yellow-600' },
     { name: 'Google Play Publishing', icon: Smartphone, color: 'from-green-500 to-emerald-500' },
     { name: 'App Store Deployment', icon: Smartphone, color: 'from-gray-400 to-gray-600' },
     { name: 'Git & GitHub', icon: GitBranch, color: 'from-orange-500 to-red-600' },
